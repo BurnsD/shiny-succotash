@@ -8,7 +8,6 @@ const {
     deletePizza
   } = require('../../controllers/pizza-controller');
 
-
 // /api/pizzas
 router
   .route('/')

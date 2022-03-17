@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const PizzaSchema = new Schema(
   {
@@ -27,6 +28,7 @@ const PizzaSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true
     },
     id: false
   }
@@ -41,7 +43,5 @@ const Pizza = model('Pizza', PizzaSchema);
 
 // export the Pizza model
 module.exports = Pizza;
-const Pizza = require('./Pizza');
-const Comment = require('./Comment');
 
 module.exports = { Pizza, Comment };
